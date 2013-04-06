@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'djdrill.views.home', name='home'),
-    # url(r'^djdrill/', include('djdrill.foo.urls')),
+    (r'^accounts/', include('registration.backends.default.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
