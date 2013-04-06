@@ -67,4 +67,4 @@ html, body {
 
 .content-area{border:black 1px solid;min-height:400px;width:800px;margin:auto;}
 #add-list-form{display:none;}
-.clickable{cursor: pointer;}
+.clickable{ cursor: pointer; }
