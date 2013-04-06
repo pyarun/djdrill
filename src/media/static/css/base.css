@@ -2,6 +2,7 @@ html, body {
 	margin:auto;
     padding:auto;
     border:0;
+    font-family:Arial, Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -44,7 +45,7 @@ html, body {
 	float: left;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: 5px;
 	width:500px;
 }
