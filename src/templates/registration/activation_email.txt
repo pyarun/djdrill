@@ -1,8 +1,8 @@
 Hi,
 
-    You are successfully registered with our site. To activate your account {{ site }} with following activation key.
+    You are successfully registered with our site. To activate your account at {{ site }}, plese follow the link.
     
-    Activation key: {{ activation_key }}
+    Activation link: http://172.16.0.84:8000/accounts/activate/{{ activation_key }}
 
     Please activate your account within next {{ expiration_days }} days.
     
