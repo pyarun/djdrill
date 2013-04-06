@@ -1,14 +1,10 @@
+{% extends "base.html" %}
 
-
-
+{% block content %}
+<div class="content">
 <!-- list of surveys -->
 {% for survey in objects %}
-	{{ survey.title }}
-</br>
-	{{ survey.description }}
-</br>
-
-	
-	
-
+	<b><a href="javascript: void(0);">{{ survey.title }}</a></b> - {{ survey.description }}
 {% endfor %}
+</div>
+{% endblock %}

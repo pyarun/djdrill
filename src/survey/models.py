@@ -46,7 +46,7 @@ class Survey(models.Model):
     opens   = models.DateTimeField(_('survey starts accepting submissions on'))
     closes  = models.DateTimeField(_('survey stops accepting submissions on'))
     # Define the behavior of the survey
-    is_acitve = models.BooleanField(_('survey is visible'))
+    is_active = models.BooleanField(_('survey is visible'))
     public  = models.BooleanField(_('survey results are public'))
     restricted = models.BooleanField(verbose_name=_("restrict the survey to authentified user")
                                      ,blank=True,default=False)

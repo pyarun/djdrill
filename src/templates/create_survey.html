@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block header %}
+	<script src="{{STATIC_URL}}js/jquery/jquery.cookie.js"></script>
+	<script src="{{STATIC_URL}}js/jquery/jquery.collapse.js"></script>
+	<script src="{{STATIC_URL}}js/survey.js"></script>
+{% endblock %}
+{% block content %}
+	<div class="content">
+		<div class="heading">
+			Create your Survey
+		</div>
+		<div id="add-list">
+			<button id="add_new_list" class="add_que_button">
+				Add a Question
+			</button>
+			<div id="add-list-form">
+				<form action="{#% url add_list %#}" method="post">
+					<!-- {% csrf_token %} -->
+					<input type="text" name="listname" placeholder="Enter your question here" />
+					<button id="add_new_entry" class="add_opt_button" type="button">
+						Add Option
+					</button>
+					<button type="submit" class="add_opt_button">
+						save
+					</button>
+		
+					<div id="add-entries">
+						<ul></ul>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<!-- {#% for object in objects %#} -->
+		<div class="demo" id=demo-{{object.id}}>
+			<div>
+				<!-- <h2>{{object.name}}</h2> -->
+				<h2>Your Questions</h2>
+				<div>
+					<button id="addentry-{{object.id}}" class="add_entry_button add_opt_button">
+						Add Option
+					</button>
+					<button id="saveentry-{{object.id}}" disabled type="submit" class="save_entry_button add_opt_button">
+						Update
+					</button>
+					<span class="clickable delete-list" id="delete-list-{{object.id}}" >Delete</span>
+					<form name="list-elements-{{object.id}}"  action="{#% url update_list object.id %#}" method="post">
+						{% csrf_token %}
+						<ul>
+							{% for elem in object.mlist %}
+								<li id="entry" data-listid="{{object.id}}" data-elemindex="{{elem.id}}">
+									{{elem}} <span id="rmentry-{{object.id}}-{{forloop.counter0}}"  class="remove-entry clickable"> Remove</span>
+								</li>
+							{% endfor %}
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

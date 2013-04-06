@@ -13,6 +13,10 @@ html, body {
   background-color:#acc;
 }
 
+.heading { font-style: italic;
+    text-align: center;
+}
+
 .footer {
   position: absolute;
   height: 50px;
@@ -25,7 +29,7 @@ html, body {
 }
 
 .content {
-  position: absolute
+  position: absolute;
   top: 50px;
   left: 0px;
   right: 0px;
@@ -81,4 +85,19 @@ html, body {
 color:red;
 text-align:center;
 font-size:13px;
+}
+
+.add_que_button{ background-image:url(../images/grey_btnbg.jpg); background-repeat:repeat-x; border:1px solid #d6d6d6; height:35px; margin-left:15px; float:right; cursor:pointer; padding:0 5px; font-size:13px; color:#515050; text-align:center; -webkit-text-shadow: 1px 1px 3px #818282; /* Safari and Chrome */ text-shadow: 1px 1px 3px #818282; font-weight:bold; border-radius:0px}
+.add_opt_button{ background-image:url(../images/grey_btnbg.jpg); background-repeat:repeat-x; border:1px solid #d6d6d6; height:25px; margin-left:15px; cursor:pointer; padding:0 10px; font-size:13px; color:#515050; text-align:center; -webkit-text-shadow: 1px 1px 3px #818282; /* Safari and Chrome */ text-shadow: 1px 1px 3px #818282; font-weight:bold; border-radius:5px}
+
+form input{
+	margin-left: 40px;
+    padding-left: 10px;
+    width: 300px;
+}
+
+form #add-entries input{
+	margin-left: 0px;
+    padding-left: 10px;
+    width: 300px;
 }

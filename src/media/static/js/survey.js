@@ -13,12 +13,14 @@ $(document).ready(function() {
 	$("button#add_new_entry").click(function() {
 		var newentryinput = $("<input>").attr({
 			"name" : "entry",
-			"type" : "text"
+			"type" : "text",
+			"placeholder": "Enter user option here"
 		});
 		var newli = $("<li>").append(newentryinput);
 		$("div#add-entries ul").append(newli);
 	})
 
+	//Add options to update an entry
 	$("button.add_entry_button").click(function() {
 		var id = $(this).attr("id");
 		id = id.split("-")[1];
@@ -33,6 +35,7 @@ $(document).ready(function() {
 		entriesul.append(newli);
 	});
 
+	//submits user's entries
 	$(".save_entry_button").click(function() {
 		var form = $(this).nextAll("form").first();
 		form.submit();
@@ -53,8 +56,8 @@ $(document).ready(function() {
 		$.post(url, data, function(data, status, xhr) {
 			if (status == "success" && data == "true") {
 				elem.parent().remove();
-				var ul = elem.parentsUntil("ul").last().parent()debugger;
-				$.each(ul.children(), function(index, item) { debugger;
+				var ul = elem.parentsUntil("ul").last().parent()
+				$.each(ul.children(), function(index, item) {
 
 				})
 			}
@@ -62,7 +65,7 @@ $(document).ready(function() {
 		})
 	});
 
-	//delete a list
+	//delete an entry
 	$(".delete-list").click(function() {
 		var elem = $(this);
 		var eltagid = elem.attr("id");
