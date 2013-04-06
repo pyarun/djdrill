@@ -13,7 +13,8 @@ $(document).ready(function() {
 	$("button#add_new_entry").click(function() {
 		var newentryinput = $("<input>").attr({
 			"name" : "entry",
-			"type" : "text"
+			"type" : "text",
+			"placeholder": "Enter user option here"
 		});
 		var newli = $("<li>").append(newentryinput);
 		$("div#add-entries ul").append(newli);
@@ -64,7 +65,7 @@ $(document).ready(function() {
 		})
 	});
 
-	//delete a list
+	//delete an entry
 	$(".delete-list").click(function() {
 		var elem = $(this);
 		var eltagid = elem.attr("id");
