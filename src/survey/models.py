@@ -8,7 +8,10 @@ from django.contrib.auth.models import User
 
 
 class Answer(models.Model):
-    ans_text= models.TextField() 
+    ans_text= models.TextField()
+    
+    def __unicode__(self):
+        return self.ans_text
 
     
 class Question(models.Model):
@@ -16,7 +19,8 @@ class Question(models.Model):
     ques_text = models.TextField("question")
     answers = models.ManyToManyField(Answer, help_text="available choices")
     
-    
+    def __unicode__(self):
+        return self.ques_text
 
 class SurveyManager(models.Manager):
 
