@@ -22,7 +22,7 @@ def list_survey(request):
     return render(request, "list_surveys.html", context )
 
 
-@login_required
+#@login_required
 def create_survey(request):
     """
         Allows the logged in User to Create new Surveys.
@@ -32,7 +32,7 @@ def create_survey(request):
         form = SurveyForm()
         context["form"] = form
     
-    logger.info("{user} accessed create survey page".format(user=request.user.get_full_name()))
+#    logger.info("{user} accessed create survey page".format(user=request.user.get_full_name()))
     return render(request, "create_survey.html", context)
         
         
