@@ -1,0 +1,59 @@
+{% extends base.html %}
+{% block header %}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="{{static_media}}/js/jquery/jquery.cookie.js"></script>
+	<script src="{{static_media}}/js/jquery/jquery.collapse.js"></script>
+{% endblock %}
+{% block content %}
+	<div class="heading">
+		Create your Survey
+	</div>
+	<div id="add-list">
+		<button id="add_new_list" >
+			Add new List
+		</button>
+		<div id="add-list-form">
+			<form action="{% url add_list %}" method="post">
+				<!-- {% csrf_token %} -->
+				<input type="text" name="listname" placeholder="Name of the list" />
+				<button id="add_new_entry" type="button">
+					Add entry
+				</button>
+				<button type="submit">
+					save
+				</button>
+	
+				<div id="add-entries">
+					<ul></ul>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!-- {% for object in objects %} -->
+	<div class="demo" id=demo-{{object.id}}>
+		<div>
+			<!-- <h2>{{object.name}}</h2> -->
+			<h2>Name</h2>
+			<div>
+				<button id="addentry-{{object.id}}" class="add_entry_button">
+					Add Entry
+				</button>
+				<button id="saveentry-{{object.id}}" disabled type="submit" class="save_entry_button">
+					Update
+				</button>
+				<span class="clickable delete-list" id="delete-list-{{object.id}}" >Delete</span>
+				<form name="list-elements-{{object.id}}"  action="{% url update_list object.id %}" method="post">
+					{% csrf_token %}
+					<ul>
+						{% for elem in object.mlist %}
+						<li id="entry" data-listid="{{object.id}}" data-elemindex="{{elem.id}}">
+							{{elem}} <span id="rmentry-{{object.id}}-{{forloop.counter0}}"  class="remove-entry clickable"> Remove</span>
+						</li>
+						{% endfor %}
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
