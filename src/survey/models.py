@@ -14,7 +14,8 @@ class Answer(models.Model):
 class Question(models.Model):
     
     ques_text = models.TextField("question")
-    answers = models.ManyToManyField(Answer, help_text="available choices")
+    answers = models.ManyToManyField(Answer, related_name="choices", help_text="available choices")
+#    correct_answer= models.ForeignKey(Answer, null=False, blank=False)
     
     
 
@@ -36,7 +37,7 @@ class Survey(models.Model):
     description= models.TextField(verbose_name=_("description"),
                             help_text=_("This field appears on the public web site and should give an overview to the interviewee"),
                             blank=True)
-       
+    questions = models.ManyToManyField(Question)
     ## Add validation on datetimes
     opens   = models.DateTimeField(_('survey starts accepting submissions on'))
     closes  = models.DateTimeField(_('survey stops accepting submissions on'))
