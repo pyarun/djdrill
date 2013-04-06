@@ -2,7 +2,6 @@ html, body {
 	margin:auto;
     padding:auto;
     border:0;
-    font-family:Arial, Arial, Helvetica, sans-serif;
 }
 
 .header {
@@ -66,53 +65,20 @@ html, body {
 	float:left;
 }
 
+.content-area{border:black 1px solid;min-height:400px;width:800px;margin:auto;}
+#add-list-form{display:none;}
+.clickable{ cursor: pointer; }
+
 .loginbox {
     background-color: #AACCCC;
     height: auto;
     margin: auto;
-    padding: 30px;
-    width: 480px;
+    padding: 10px;
+    width: 340px;
 }
 
-.loginbox input[type=text], .loginbox input[type=password] {
-    width:300px;
-    height:22px;
-    padding:5px;
-    font-size:14px;
-}
-
-.loginbox label {
-    float: left;
-    font-size: 20px;
-    width: 130px;
-    font-weight:bold;
-}
-
-.loginbox input[type=submit] {
-    height:40px;
-    width:auto;
-    font-weight:normal;
-    font-size:14px;
-    padding:0px 10px;
-}
-
-.content p {
-    text-align:center;
-    color:red;
-}
-
-.loginbox input[type=reset] {
-    height:40px;
-    width:auto;
-    font-weight:normal;
-    font-size:14px;
-    padding:0px 10px;
-}
-
-.loginbox .errorlist {
-    color: red;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-    text-align: left;
+.content p, .errorlist{
+color:red;
+text-align:center;
+font-size:13px;
 }
