@@ -86,8 +86,6 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_PATH, "media/static"),
 )
 
-print STATICFILES_DIRS
-
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
@@ -127,7 +125,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(PROJECT_PATH, "templates"),
 )
-print TEMPLATE_DIRS
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -141,17 +138,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'registration',
-)
-
-# Context processors
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
+    'south',
+    'survey',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -186,8 +174,13 @@ LOGGING = {
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_HOST = "70.87.29.134"
-EMAIL_HOST_PASSWORD ="njNTq#i5"
-EMAIL_HOST_USER = "fluidcm@leosys.net"
-EMAIL_PORT = "25"
-SERVER_EMAIL = EMAIL_HOST_USER
+# Context processors
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+)

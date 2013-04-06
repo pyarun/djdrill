@@ -47,5 +47,7 @@ def check_title_availability(request):
     if title:
         status = Survey.objects.filter(title=title).exists()
         title_already_user = not status
+        
+    return HttpResponse(json.dumps(dict(status=title_already_user)), content_type="application/json")
     
     
