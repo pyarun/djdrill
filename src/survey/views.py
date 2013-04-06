@@ -31,6 +31,14 @@ def create_survey(request):
     if request.method == "GET":
         form = SurveyForm()
         context["form"] = form
+        
+    if request.method == "POST":
+        form = SurveyForm(request.POST)
+        if form.is_valid():
+            pass
+        else:
+            
+        
     
     logger.info("{user} accessed create survey page".format(user=request.user.get_full_name()))
     return render(request, "create_survey.html", context)

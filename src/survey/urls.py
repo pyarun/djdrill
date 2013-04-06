@@ -13,6 +13,7 @@ urlpatterns = patterns("survey",
         url("new$", "views.create_survey", name="create_survey"),
         
         url("check/title/availablity$", "views.check_title_availability", name="check_title_availability"),
+        
                        
 
 
