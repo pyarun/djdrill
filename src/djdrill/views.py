@@ -12,5 +12,4 @@ def home(request):
         pass
     if request.method == "POST":
         pass
-    return render_to_response("base.html", context, RequestContext(request))
-
+    return render_to_response("index.html", context, RequestContext(request))
