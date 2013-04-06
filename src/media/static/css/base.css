@@ -90,12 +90,27 @@ html, body {
 
 .loginbox input[type=submit] {
     height:40px;
-    width:80px;
+    width:auto;
     font-weight:normal;
     font-size:14px;
+    padding:0px 10px;
 }
 
 .content p {
     text-align:center;
     color:red;
 }
+
+.loginbox input[type=reset] {
+    height:40px;
+    width:auto;
+    font-weight:normal;
+    font-size:14px;
+    padding:0px 10px;
+}
+
+.loginbox .errorlist {
+    color:red;
+    text-align:center;
+}
+
