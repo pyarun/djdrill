@@ -44,7 +44,7 @@ html, body {
 	float: left;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 60px;
+    margin-left: 40px;
     margin-top: 5px;
 	width:500px;
 }
@@ -75,4 +75,10 @@ html, body {
     margin: auto;
     padding: 10px;
     width: 340px;
+}
+
+.content p, .errorlist{
+color:red;
+text-align:center;
+font-size:13px;
 }
