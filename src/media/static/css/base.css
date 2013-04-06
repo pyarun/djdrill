@@ -110,7 +110,9 @@ html, body {
 }
 
 .loginbox .errorlist {
-    color:red;
-    text-align:center;
+    color: red;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
-

@@ -10,7 +10,7 @@
                 <tr>
                     <td>{{ field.label_tag  }}</td>
                     <td>{{ field }}<br/>
-                        {{ field.errors }} 
+                        <span class="errorlist">{{ field.errors.0 }} </span>
                     </td>
                 </tr> 
                 {% endfor %}
