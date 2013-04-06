@@ -1,0 +1,10 @@
+Hi,
+
+    You are successfully registered with our site. To activate your account {{ site }} with following activation key.
+    
+    Activation key: {{ activation_key }}
+
+    Please activate your account within next {{ expiration_days }} days.
+    
+Regards,
+Admin

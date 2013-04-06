@@ -173,3 +173,10 @@ LOGGING = {
 }
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = "70.87.29.134"
+EMAIL_HOST_PASSWORD ="njNTq#i5"
+EMAIL_HOST_USER = "fluidcm@leosys.net"
+EMAIL_PORT = "25"
+SERVER_EMAIL = EMAIL_HOST_USER
