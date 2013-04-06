@@ -143,6 +143,17 @@ INSTALLED_APPS = (
     'registration',
 )
 
+# Context processors
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+)
+
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
@@ -173,3 +184,10 @@ LOGGING = {
 }
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window;
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = "70.87.29.134"
+EMAIL_HOST_PASSWORD ="njNTq#i5"
+EMAIL_HOST_USER = "fluidcm@leosys.net"
+EMAIL_PORT = "25"
+SERVER_EMAIL = EMAIL_HOST_USER

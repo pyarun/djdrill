@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+   <div class="content">
+       <h2>Account activation failed...</h2>
+       <p>Account activation failed with the following activation key.</p>
+       <p><b>{{ activation_key }}</b></p>
+       <p>Please check the activation key and try again.</p>
+   </div>
+{% endblock content %}

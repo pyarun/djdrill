@@ -14,4 +14,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'login/$', 'djdrill.views.login', name='login'),
+    url(r'logout/$', 'djdrill.views.logout', name='logout'),
+    
+    url(r'^survey/', include("survey.urls")),
+    
 )
