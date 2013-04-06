@@ -18,7 +18,7 @@ def list_survey(request):
     
     
     context = dict(objects=slist)
-    logger.info("{user} accessed list survey page".format({"user": request.user.get_full_name()}))
+#    logger.info("{user} accessed list survey page".format({"user": request.user.get_full_name()}))
     return render(request, "list_surveys.html", context )
 
 
