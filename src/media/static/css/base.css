@@ -64,3 +64,37 @@ html, body {
 	clear:both;
 	float:left;
 }
+
+.loginbox {
+    background-color: #AACCCC;
+    height: auto;
+    margin: auto;
+    padding: 30px;
+    width: 480px;
+}
+
+.loginbox input[type=text], .loginbox input[type=password] {
+    width:300px;
+    height:22px;
+    padding:5px;
+    font-size:14px;
+}
+
+.loginbox label {
+    float: left;
+    font-size: 20px;
+    width: 130px;
+    font-weight:bold;
+}
+
+.loginbox input[type=submit] {
+    height:40px;
+    width:80px;
+    font-weight:normal;
+    font-size:14px;
+}
+
+.content p {
+    text-align:center;
+    color:red;
+}
